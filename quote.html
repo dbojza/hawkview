@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Bojza - HawkView</title>
+  <meta content="" name="Bojza - HawkView">
+
+  <!-- Favicons -->
+  <link href="assets/images/no-bg-logo-hv.png" rel="icon">
+  <link href="assets/images/no-bg-logo-hv.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="assets/stylesheets/styles.css" rel="stylesheet">
+</head>
+<body>
+
+  
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1>Bojza - <span>HawkView.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar"> 
+        <ul>
+          <li><a href="index.html">Kezdőlap</a></li>
+          <li><a href="about-me.html">Rólunk</a></li>
+          <li><a href="quote.html">Áraink</a></li>          
+          <li><a href="availability.html">Kapcsolat</a></li>
+          <li class="dropdown"><a href=""><span>Egyéb</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="galery.html">Galéria</a></li>
+              <li><a href="service.html">Szervíz</a></li>
+              <li><a href="privacy-p.html">Privacy policy</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show  bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+
+
+
+  <style>
+    /* HawkView Design */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .bg-dark {
+      background-color: #343a40 !important;
+    }
+    .text-light {
+      color: #f8f9fa !important;
+    }
+    .btn-primary {
+      background-color: #5f6368;
+      border-color: #5f6368;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #343a40;
+    }
+    .pricing-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+    .pricing-card:hover {
+      transform: translateY(-10px);
+    }
+    .pricing-card h5 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .pricing-card .price {
+      font-size: 1.75rem;
+      font-weight: bold;
+      color: #5f6368;
+      margin-bottom: 1.5rem;
+    }
+    .pricing-card ul {
+      padding-left: 20px;
+      margin-bottom: 1.5rem;
+    }
+    .pricing-card ul li {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    .cta-button {
+      background-color: #ff6600;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      margin-top: 2rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #5f6368;
+    }
+    .cta-button i {
+      margin-right: 0.5rem;
+    }
+    .cta-button-container {
+      text-align: center;
+    }
+    /* Hírlevél */
+    .newsletter-section {
+      background-color: #343a40;
+      color: white;
+      padding: 4rem 0;
+      margin-top: 3rem;
+      border-top: 4px solid #ff6600;
+    }
+    .newsletter-form {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-direction: column;
+      align-items: center;
+    }
+    .newsletter-input {
+      padding: 1rem;
+      border-radius: 50px;
+      border: 2px solid #ff6600;
+      font-size: 1rem;
+      width: 350px;
+      transition: all 0.3s ease;
+    }
+    .newsletter-input:focus {
+      outline: none;
+      border-color: #ff6600;
+      box-shadow: 0 0 10px rgba(255, 102, 0, 0.6);
+    }
+    .newsletter-btn {
+      background-color: #ff6600;
+      color: white;
+      padding: 1rem 3rem;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+      margin-top: 1rem;
+    }
+    .newsletter-btn:hover {
+      background-color: #5f6368;
+    }
+    .newsletter-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .newsletter-desc {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Árajánlatkérés és Rendszerek -->
+  <section id="pricing" class="container my-5">
+    <h2 class="section-title ">Kamerarendszer felszereléssel</h2>
+    <div class="row py-2">
+      <!-- Kamera rendszer -->
+      <div class="col-md-4 mb-4">
+        <div class="pricing-card">
+          <h5>Kamera Rendszer</h5>
+          <p class="price">akár 500,000 Ft-tól</p>
+          <ul>
+            <li>FHD vagy 4K felbontás</li>
+            <li>Éjjellátó funkció</li>
+            <li>Okos telefonos elérhetőség</li>
+            <li>Automatikus mozgásérzékelés</li>
+        </a>
+          </ul>
+        </div>
+      </div>
+      <!-- Beléptető rendszer -->
+      <div class="col-md-4 mb-4">
+        <div class="pricing-card">
+          <h5>Beléptető Rendszer</h5>
+          <p class="price">akár 300,000 Ft-tól</p>
+          <ul>
+            <li>Elektronikus beléptetés</li>
+            <li>Védelem a jogosulatlan belépésekkel szemben</li>
+            <li>Integrálható a kamera és riasztó rendszerekkel</li>
+            <li>Időpont alapú belépési engedélyek</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Riasztórendszer -->
+      <div class="col-md-4 mb-4">
+        <div class="pricing-card">
+          <h5>Riasztórendszer</h5>
+          <p class="price">akár 500,000 Ft-tól</p>
+          <ul>
+            <li>Okos telefonos értesítés</li>
+            <li>Vezeték nélküli telepítés</li>
+            <li>Részletes eseménynapló</li>
+            <li>Helyi és távoli aktiválás</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Közös Gomb -->
+    <div class="cta-button-container">
+      <a href="https://forms.gle/uNrqAjqHhZvC2Lws8" target="_blank" class="cta-button">
+        <i class="bi bi-arrow-right-circle"></i> Kérj ingyenes visszahívást és árajánlatot
+      </a>
+    </div>
+  </section>
+
+  <!-- Hírlevél Feliratkozás -->
+  <section class="newsletter-section">
+    <div class="container text-center">
+      <h2 class="newsletter-title">Iratkozz fel hírlevelünkre!</h2>
+      <p class="newsletter-desc">Legyél mindig naprakész a legújabb ajánlatainkról és termékeinkről!</p>
+      <div class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Add meg az e-mail címed" required>
+        <button class="newsletter-btn">Feliratkozás</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+<footer class="hv-footer bg-dark text-light pt-5 pb-3 mt-5 hv-footer-anim">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <div class="col-md-4 mb-4 hv-fade-in">
+        <h5 class="text-uppercase fw-bold mb-2">Bojza HawkView</h5>
+        <p style="font-size: 0.9rem;">„Ha a HawkView néz, baj nem ér!”<br> Biztonságtechnika modern köntösben.</p>
+      </div>
+      <div class="col-md-4 mb-4 hv-fade-in" style="animation-delay: 0.2s;">
+        <h6 class="fw-bold mb-2">Kapcsolat</h6>
+        <p class="mb-1"><i class="bi bi-telephone-fill me-2"></i>+36 20 986 6975</p>
+        <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i>info@bojza-hawkview.hu</p>
+        <p><i class="bi bi-geo-alt-fill me-2"></i>Tatabánya, sárberki lkt. 123</p>
+      </div>
+      <div class="col-md-4 mb-4 hv-fade-in" style="animation-delay: 0.4s;">
+        <h6 class="fw-bold mb-2">Kövess minket</h6>
+        <a href="#" class="text-light me-3"><i class="bi bi-tiktok fs-5"></i></a>
+        <a href="#" class="text-light me-3"><i class="bi bi-facebook fs-5"></i></a>
+        <a href="#" class="text-light me-3"><i class="bi bi-instagram fs-5"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom text-center mt-4">
+    
+      <p class="text-muted mb-0">
+        &copy; <script>document.write(new Date().getFullYear());</script> Minden jog fenntartva! |
+        Website design <i class="fa fa-heart" aria-hidden="true"></i> by
+        <a href="https://dbojza.netlify.app/" target="_blank" >dbojza</a>
+      </p>
+        <a href="https://dbojza.netlify.app/" target="_blank">
+        <img src="https://dbojza.netlify.app/images/logo.png" alt="dbojza logó" class="footer-logo mb-2">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .hv-footer-anim {
+    animation: hv-fadeIn 1s ease-in-out;
+  }
+
+  .hv-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: hv-fadeInUp 0.8s forwards;
+  }
+
+  @keyframes hv-fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes hv-fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo {
+    max-height: 80px;
+    width: auto;
+  }
+</style>
+
+
+
+
+
+  
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/javascripts/main.js"></script>
+
+</body>
+
+</html>

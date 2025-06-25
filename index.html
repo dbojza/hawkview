@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Bojza - HawkView</title>
+  <meta content="" name="Bojza - HawkView">
+
+  <!-- Favicons -->
+  <link href="assets/images/no-bg-logo-hv.png" rel="icon">
+  <link href="assets/images/no-bg-logo-hv.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="assets/stylesheets/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Cookie Elfogadási Popup -->
+<div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-content">
+      <div class="cookie-text">
+          <p>Ez az oldal sütiket használ a felhasználói élmény javítása érdekében. Ha folytatja a böngészést, akkor beleegyezik a sütik használatába. <a href="privacy-p.html" class="cookie-link">Tudj meg többet.</a></p>
+      </div>
+      <button id="accept-cookies" class="btn-accept">Elfogadom</button>
+  </div>
+</div>
+
+<style>
+  /* Cookie Popup alap stílusok */
+  .cookie-banner {
+      position: fixed;
+      bottom: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #111;
+      color: #fff;
+      padding: 20px 40px;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.4s ease, bottom 0.4s ease;
+      z-index: 9999;
+  }
+
+  /* Link stílus */
+  .cookie-link {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+  }
+
+  .cookie-link:hover {
+      color: #2980b9;
+  }
+
+  /* Elfogadom gomb */
+  .btn-accept {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+      margin-top: 15px;
+  }
+
+  .btn-accept:hover {
+      background-color: #2980b9;
+      transform: scale(1.1);
+  }
+
+  /* Popup animáció */
+  .cookie-banner.show {
+      display: block;
+      opacity: 1;
+      bottom: 20px;
+  }
+
+  @media (max-width: 768px) {
+      .cookie-banner {
+          width: 90%;
+          padding: 15px 25px;
+      }
+
+      .cookie-text {
+          font-size: 14px;
+      }
+
+      .btn-accept {
+          width: 100%;
+          padding: 10px 20px;
+      }
+  }
+</style>
+
+<script>
+  function checkCookieConsent() {
+      if (localStorage.getItem("cookiesAccepted") === "true") {
+          document.getElementById("cookie-banner").style.display = "none";
+      } else {
+          document.getElementById("cookie-banner").classList.add("show");
+      }
+  }
+
+  document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").classList.remove("show");
+  });
+
+  window.onload = checkCookieConsent;
+</script>
+
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1>Bojza - <span>HawkView.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar"> 
+        <ul>
+          <li><a href="#kezdolap">Kezdőlap</a></li>
+          <li><a href="about-me.html">Rólunk</a></li>
+          <li><a href="quote.html">Áraink</a></li>          
+          <li><a href="availability.html">Kapcsolat</a></li>
+          <li class="dropdown"><a href=""><span>Egyéb</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="galery.html">Galéria</a></li>
+              <li><a href="service.html">Szervíz</a></li>
+              <li><a href="privacy-p.html">Privacy policy</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <i class="mobile-nav-toggle mobile-nav-show  bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header>
+
+  <section id="kezdolap" class="hero">
+    <div class="container position-relative">
+      <div class="row gy-5" data-aos="fade-in">
+        <div class="col-lg-12  order-lg-1 d-flex flex-column justify-content-center text-center caption">
+          <h2>Üdvözöl <span>a HawkView</span><span class="circle">.</span></h2>
+          <p>Ha a "HawkView" néz baj nem ér!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="icon-boxes position-relative">
+      <div class="container position-relative">
+        <div class="row gy-4 mt-5">
+
+          <div class="col-xl-4 col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-fullscreen"></i></div>
+              <h4 class="title"><a href="order.html" class="stretched-link">Termékeink</a></h4>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-4 card-two" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-headset"></i></div>
+              <h2 class="title"><a href="availability.html" class="stretched-link">Elérhetőség</a></h2>
+              <h4 class="title"><a href="availability.html" class="stretched-link">garantáljuk a gyors választ</a></h4>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-cart2"></i></div>
+              <h4 class="title"><a href="shop.html" class="stretched-link">Rendelés</a></h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+  <main id="main">
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h4><a href="about-me.html">Rólunk</a></h4>
+          <p>Ismerje meg jobban a HawkView-t, hogy mire képes!</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <img src="assets/images/about.jpg" class="img-fluid rounded-4 mb-4" alt="">
+          </div>
+          <div class="col-lg-8">
+            <div class="content ps-0 ps-lg-5">
+              <p>
+                A Bojza HawkView egy fiatalos, lendületes biztonságtechnikai vállalkozás, amely modern megoldásokkal védi otthonod és vállalkozásod. Kínálatunkban megtalálhatók a professzionális telepítésű és szereld-magad rendszerek is, legyen szó kamerákról, riasztókról vagy távfelügyeletről. Célunk, hogy a biztonság egyszerre legyen elérhető, megbízható és stílusos
+              </p>
+              <ul>
+                <li><i class="bi bi-1-square"></i>Profi telepítést biztosítunk minden biztonsági rendszerhez, hogy otthonod mindig védett legyen.</li>
+                <li><i class="bi bi-2-square"></i> Szereld magad opciók is elérhetők, ha saját kezűleg szeretnéd telepíteni az eszközeinket.</li>
+                <li><i class="bi bi-3-square"></i> Csak megbízható és prémium minőségű eszközöket kínálunk, hogy hosszú távon védelmet nyújtsanak.</li>
+                <li><i class="bi bi-4-square"></i> Gyors kiszállásunk garantálja, hogy a telepítés és a karbantartás időben megtörténik.</li>
+                <li><i class="bi bi-5-square"></i> Testreszabott biztonsági megoldásokat kínálunk minden ügyfél igényeihez mérten.</li>
+                <li><i class="bi bi-6-square"></i>Rugalmasságot biztosítunk, hogy a telepítési időpontot és a szolgáltatásokat a saját igényeidhez igazíthasd.</li>
+                <li><i class="bi bi-7-square"></i>Ügyfélszolgálatunk mindig elérhető, hogy segítsen a kérdéseidben és a rendszerek használatában.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="clients" class="clients">
+      <div class="container" data-aos="zoom-out">
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/images/kiemelt/kiemelt-1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/kiemelt/kiemelt-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/kiemelt/kiemelt-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/kiemelt/kiemelt-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/kiemelt/kiemelt-5.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/kiemelt/kiemelt-6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/kiemelt/kiemelt-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/kiemelt/kiemelt-8.png" class="img-fluid" alt=""></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="call-to-action" class="call-to-action">
+      <div class="container text-center" data-aos="zoom-out">
+        <h3>Szeretne ingyenes árajánlat kapni?</h3>
+        <p>válaszoljon gyors kérdéseinkre és kérjen vissza hívást!</p>
+        <a class="cta-btn" href="https://forms.gle/uNrqAjqHhZvC2Lws8">Kitöltés</a>
+      </div>
+    </section>
+
+
+<footer class="hv-footer bg-dark text-light pt-5 pb-3 mt-5 hv-footer-anim">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <div class="col-md-4 mb-4 hv-fade-in">
+        <h5 class="text-uppercase fw-bold mb-2">Bojza HawkView</h5>
+        <p style="font-size: 0.9rem;">„Ha a HawkView néz, baj nem ér!”<br> Biztonságtechnika modern köntösben.</p>
+      </div>
+      <div class="col-md-4 mb-4 hv-fade-in" style="animation-delay: 0.2s;">
+        <h6 class="fw-bold mb-2">Kapcsolat</h6>
+        <p class="mb-1"><i class="bi bi-telephone-fill me-2"></i>+36 20 986 6975</p>
+        <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i>info@bojza-hawkview.hu</p>
+        <p><i class="bi bi-geo-alt-fill me-2"></i>Tatabánya, sárberki lkt. 123</p>
+      </div>
+      <div class="col-md-4 mb-4 hv-fade-in" style="animation-delay: 0.4s;">
+        <h6 class="fw-bold mb-2">Kövess minket</h6>
+        <a href="#" class="text-light me-3"><i class="bi bi-tiktok fs-5"></i></a>
+        <a href="#" class="text-light me-3"><i class="bi bi-facebook fs-5"></i></a>
+        <a href="#" class="text-light me-3"><i class="bi bi-instagram fs-5"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom text-center mt-4">
+    
+      <p class="text-muted mb-0">
+        &copy; <script>document.write(new Date().getFullYear());</script> Minden jog fenntartva! |
+        Website design <i class="fa fa-heart" aria-hidden="true"></i> by
+        <a href="https://dbojza.netlify.app/" target="_blank" >dbojza</a>
+      </p>
+        <a href="https://dbojza.netlify.app/" target="_blank">
+        <img src="https://dbojza.netlify.app/images/logo.png" alt="dbojza logó" class="footer-logo mb-2">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .hv-footer-anim {
+    animation: hv-fadeIn 1s ease-in-out;
+  }
+
+  .hv-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: hv-fadeInUp 0.8s forwards;
+  }
+
+  @keyframes hv-fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes hv-fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo {
+    max-height: 80px;
+    width: auto;
+  }
+</style>
+
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/javascripts/main.js"></script>
+
+</body>
+
+</html>

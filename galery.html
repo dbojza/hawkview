@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Bojza - HawkView</title>
+  <meta content="" name="Bojza - HawkView">
+
+  <!-- Favicons -->
+  <link href="assets/images/no-bg-logo-hv.png" rel="icon">
+  <link href="assets/images/no-bg-logo-hv.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="assets/stylesheets/styles.css" rel="stylesheet">
+</head>
+<body>
+
+  
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1>Bojza - <span>HawkView.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar"> 
+        <ul>
+          <li><a href="index.html">Kezdőlap</a></li>
+          <li><a href="about-me.html">Rólunk</a></li>
+          <li><a href="quote.html">Áraink</a></li>          
+          <li><a href="availability.html">Kapcsolat</a></li>
+          <li class="dropdown"><a href=""><span>Egyéb</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="galery.html">Galéria</a></li>
+              <li><a href="service.html">Szervíz</a></li>
+              <li><a href="privacy-p.html">Privacy policy</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show  bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+
+
+
+
+
+
+  <section class="gallery-section">
+    <h2 class="gallery-title">Referenciáink</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="assets/images/gáléria/g-1.jpg" alt="Projekt 1">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/gáléria/g-2.jpg" alt="Projekt 2">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/gáléria/g-3.jpg" alt="Projekt 3">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/gáléria/g-4.jpg" alt="Projekt 4">
+      </div>
+      <!-- További képek -->
+    </div>
+  </section>
+  
+
+
+
+
+
+  <style>
+    .gallery-section {
+      padding: 4rem 2rem;
+      background: #f7f9fc;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+    }
+    .gallery-title {
+      font-size: 2.5rem;
+      color: #1e2a38;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .gallery-title::after {
+      content: '';
+      width: 60px;
+      height: 4px;
+      background: #0c7b93;
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.5s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    .gallery-item::after {
+      content: "🔍";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      font-size: 2rem;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 0.8rem;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover::after {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    @media (max-width: 600px) {
+      .gallery-title {
+        font-size: 2rem;
+      }
+    }
+    </style>
+
+
+
+
+
+<footer class="hv-footer bg-dark text-light pt-5 pb-3 mt-5 hv-footer-anim">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <div class="col-md-4 mb-4 hv-fade-in">
+        <h5 class="text-uppercase fw-bold mb-2">Bojza HawkView</h5>
+        <p style="font-size: 0.9rem;">„Ha a HawkView néz, baj nem ér!”<br> Biztonságtechnika modern köntösben.</p>
+      </div>
+      <div class="col-md-4 mb-4 hv-fade-in" style="animation-delay: 0.2s;">
+        <h6 class="fw-bold mb-2">Kapcsolat</h6>
+        <p class="mb-1"><i class="bi bi-telephone-fill me-2"></i>+36 20 986 6975</p>
+        <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i>info@bojza-hawkview.hu</p>
+        <p><i class="bi bi-geo-alt-fill me-2"></i>Tatabánya, sárberki lkt. 123</p>
+      </div>
+      <div class="col-md-4 mb-4 hv-fade-in" style="animation-delay: 0.4s;">
+        <h6 class="fw-bold mb-2">Kövess minket</h6>
+        <a href="#" class="text-light me-3"><i class="bi bi-tiktok fs-5"></i></a>
+        <a href="#" class="text-light me-3"><i class="bi bi-facebook fs-5"></i></a>
+        <a href="#" class="text-light me-3"><i class="bi bi-instagram fs-5"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom text-center mt-4">
+    
+      <p class="text-muted mb-0">
+        &copy; <script>document.write(new Date().getFullYear());</script> Minden jog fenntartva! |
+        Website design <i class="fa fa-heart" aria-hidden="true"></i> by
+        <a href="https://dbojza.netlify.app/" target="_blank" >dbojza</a>
+      </p>
+        <a href="https://dbojza.netlify.app/" target="_blank">
+        <img src="https://dbojza.netlify.app/images/logo.png" alt="dbojza logó" class="footer-logo mb-2">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .hv-footer-anim {
+    animation: hv-fadeIn 1s ease-in-out;
+  }
+
+  .hv-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: hv-fadeInUp 0.8s forwards;
+  }
+
+  @keyframes hv-fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes hv-fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo {
+    max-height: 80px;
+    width: auto;
+  }
+</style>
+
+  
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/javascripts/main.js"></script>
+
+</body>
+
+</html>
+</body>
+</html>

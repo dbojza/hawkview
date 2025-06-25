@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Bojza - HawkView</title>
+  <meta content="" name="Bojza - HawkView">
+  <!-- Favicons -->
+  <link href="assets/images/no-bg-logo-hv.png" rel="icon">
+  <link href="assets/images/no-bg-logo-hv.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="assets/stylesheets/styles.css" rel="stylesheet">
+</head>
+<body>
+
+  
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1>Bojza - <span>HawkView.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar"> 
+        <ul>
+          <li><a href="index.html">Kezdőlap</a></li>
+          <li><a href="about-me.html">Rólunk</a></li>
+          <li><a href="quote.html">Áraink</a></li>          
+          <li><a href="availability.html">Kapcsolat</a></li>
+          <li class="dropdown"><a href=""><span>Egyéb</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="galery.html">Galéria</a></li>
+              <li><a href="service.html">Szervíz</a></li>
+              <li><a href="privacy-p.html">Privacy policy</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show  bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+
+
+
+<div class="py-2"></div>
+
+
+<section>
+  
+  <!-- Közös Gomb -->
+    <div class="cta-button-container">
+      <a href="https://forms.gle/uNrqAjqHhZvC2Lws8" target="_blank" class="cta-button">
+        <i class="bi bi-arrow-right-circle"></i> Kérj ingyenes visszahívást és árajánlatot
+      </a>
+    </div>
+  </section>
+
+
+
+<style>
+    /* Általános stílus */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      padding: 50px 0;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #2C3E50;
+      margin-bottom: 40px;
+      font-weight: 600;
+    }
+
+    /* Kategória választás */
+    .category-selection {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .category-btn {
+      padding: 15px 25px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .category-btn:hover {
+      background-color: #2980b9;
+      transform: scale(1.05);
+    }
+
+    /* Termékek szekció */
+    .product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .product-card .info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-card h5 {
+      font-size: 1.5rem;
+      color: #34495e;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .product-card p {
+      font-size: 1rem;
+      color: #7f8c8d;
+      margin-bottom: 15px;
+    }
+
+    /* Animáció */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Reszponzív stílusok */
+    @media (max-width: 1024px) {
+      h2 {
+        font-size: 2rem;
+      }
+
+      .category-btn {
+        font-size: 0.9rem;
+        padding: 12px 20px;
+      }
+
+      .product-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+
+      .product-card h5 {
+        font-size: 1.3rem;
+      }
+
+      .product-card p {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      .category-btn {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+      }
+
+      .product-container {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .product-card h5 {
+        font-size: 1.2rem;
+      }
+
+      .product-card p {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .category-btn {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+      }
+
+      .product-container {
+        grid-template-columns: 1fr;
+      }
+
+      .product-card h5 {
+        font-size: 1rem;
+      }
+
+      .product-card p {
+        font-size: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Termékeink</h2>
+
+    <!-- Kategória választás -->
+    <div class="category-selection">
+      <button class="category-btn" onclick="showProducts('camera')">Kamerarendszer</button>
+      <button class="category-btn" onclick="showProducts('access')">Beléptetőrendszer & Kaputelefon</button>
+      <button class="category-btn" onclick="showProducts('alarm')">Riasztórendszer</button>
+      <button class="category-btn" onclick="showProducts('additional')">Egyéb</button>
+
+    </div>
+
+    <!-- Termékek listája -->
+    <div id="products" class="product-container">
+      <!-- Itt töltődnek be a termékek -->
+    </div>
+  </div>
+
+  <script>
+    // Termékek adatbázisa
+    const products = {
+      camera: [
+        {
+          name: "akár 119 990 Ft-tól",
+          description: "Kültéri (éjjel fekete-fehér) 4 csatornás Hikvision kamerarendszer NVR vevővel",
+          image: "assets/images/order/hikvisionC-1.png"
+        },
+         {
+          name: "akár 199 999 Ft-tól",
+          description: "Kültéri (éjjel fekete-fehér) 4 csatornás Dahua kamerarendszer NVR vevővel",
+          image: "assets/images/order/dahuaC-1.png"       
+         },
+         {
+          name: "akár 299 000 Ft-tól",
+          description: "Kültéri (éjjel fekete-fehér) 8 csatornás Hikvision kamerarendszer NVR vevővel",
+          image: "assets/images/order/hikvisionC-2.png"       
+         },
+         {
+          name: "akár 300 000 Ft-tól",
+          description: "Kültéri (éjjel szines) 8 csatornás Dahua kamerarendszer 5 kamerával, NVR vevővel",
+          image: "assets/images/order/dahuaC-2.png"       
+         },
+         {
+          name: "akár 22 999 Ft-tól",
+          description: "SZERELD MAGAD - Kültéri Dahua IMOU Bullet 2C WiFi-s IP kamera",
+          image: "assets/images/order/imouC-2.png"       
+         },
+         {
+          name: "akár 25 000 Ft-tól",
+          description: "SZERELD MAGAD - Kültéri 365 fokban forgatható Dahua IMOU Cruiser 2C WiFi-s IP kamera",
+          image: "assets/images/order/imouC-1.png"       
+         },
+         {
+          name: "akár 39 000 Ft-tól",
+          description: "SZERELD MAGAD - Kültéri Xiaomi BHR4435GL WiFi-s IP kamera (bővíthető)",
+          image: "assets/images/order/xiaomiC-1.png"       
+         },
+         {
+          name: "akár 44 999 Ft-tól",
+          description: "SZERELD MAGAD - Kültéri TP-Link Tapo C310 WiFi kamera (2pc)",
+          image: "assets/images/order/tplink-tapoC-1.png"       
+         }
+      ],
+
+      access: [
+        {
+          name: "akár 34 990 Ft-tól",
+          description: "Éríntőképernyős RFID-M226 EX Beléptető szett, mágneszárral",
+          image: "assets/images/order/erintokep-belepteto-1.png"
+        },
+        {
+          name: "akár 49 990 Ft-tól",
+          description: "RFID-208-IP68 EX Beléptető szett, mágneszárral",
+          image: "assets/images/order/belepteto-1.png"
+        },
+        {
+          name: "akár 150 000 Ft-tól",
+          description: "Hikvision DS-KIS603-P Videó kaputelefon",
+          image: "assets/images/order/hikvisionK-2.png"
+        },
+        {
+          name: "akár 199 000 Ft-tól",
+          description: "Hikvision DS-KIS604-S Videó kaputelefon",
+          image: "assets/images/order/hikvisionK-1.png"
+        }
+      ],
+      
+      alarm: [
+        {
+          name: "akár 119 000 Ft-tól",
+          description: "Hikvision DS-PWA64-Kit-WE 64 zónás AXPro vezeték nélküli riasztóközpont szett",
+          image: "assets/images/order/hikvisionR-2.png"
+        },
+        {
+          name: "akár 149 000 Ft-tól",
+          description: "Dahua ART-ARC3000H-03-FW2 riasztó szett",
+          image: "assets/images/order/dahuaR-1.png"
+        },
+        {
+          name: "akár 259 000 Ft-tól",
+          description: "Hikvision DS-PWA64-Kit OR szett",
+          image: "assets/images/order/hikvisionR-1.png"
+        },
+     
+
+        {
+          name: "kérjen árajánlatott",
+          description: "Személyreszabott vezetékes riasztórendszer",
+          image: "assets/images/order/riaszto-1.png"
+        }
+      ],
+      additional:[ 
+        {
+          name: "akár 5 000 Ft-tól",
+          description: "Bojza - HawkView biztonsági kamera tábla",
+          image: "assets/images/order/hawkview-tabla-1.png"
+        },
+        {
+          name: "akár 15 000 Ft-tól",
+          description: "25 db RFID beléptető kártya",
+          image: "assets/images/order/rfidK-1.png"
+        },
+        {
+          name: "akár 39 900 Ft-tól",
+          description: "Dahua UTP kábel 305M",
+          image: "assets/images/order/dahuaK-2.png"
+        },
+        {
+          name: "akár 49 990 Ft-tól",
+          description: "SW-16-POE-SWITCH-Adatátvitel IP Kamera Rendszerek Számára",
+          image: "assets/images/order/poe-1.png"
+        },
+      {
+          name: "akár 50 000 Ft-tól",
+          description: "Dahua Monitor biztonsági kamerákhoz",
+          image: "assets/images/order/dahuaK-1.png"
+        },
+        {
+          name: "akár 200 000 Ft-tól",
+          description: "Motorline Professional Galo 600 toló- és úszókapu",
+          image: "assets/images/order/toloK-1.png"
+        },
+        {
+          name: "akár 300 000 Ft-tól",
+          description: "Motorline Professional Lince 300 szett",
+          image: "assets/images/order/szarnyaskapuM-1.png"
+        },
+        {
+          name: "akár 1 000 000 Ft-tól",
+          description: "ECO-A-6020 CERTISS – Economy Line lopásgátló kapu",
+          image: "assets/images/order/lopasgatlo-kapu-1.png"
+        },
+        
+    
+      ]
+    };
+
+    // Termékek megjelenítése
+    function showProducts(category) {
+      const categoryDescription = {
+        camera: "Válasszon a legújabb kamerarendszereink közül!",
+        access: "Modern beléptetőrendszerek, amelyek biztonságot nyújtanak!",
+        alarm: "Riasztórendszerek, amelyek védelmet nyújtanak minden helyzetben!"
+      };
+
+      // Termékek listázása
+      const productContainer = document.getElementById('products');
+      productContainer.innerHTML = '';
+
+      products[category].forEach(product => {
+        const productCard = `
+          <div class="product-card">
+            <img src="${product.image}" alt="${product.name}">
+            <div class="info">
+              <h5>${product.name}</h5>
+              <p>${product.description}</p>
+            </div>
+          </div>
+        `;
+        productContainer.innerHTML += productCard;
+      });
+
+      productContainer.style.opacity = 1; // Termékek megjelenítése
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="hv-footer bg-dark text-light pt-5 pb-3 mt-5 hv-footer-anim">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <div class="col-md-4 mb-4 hv-fade-in">
+        <h5 class="text-uppercase fw-bold mb-2">Bojza HawkView</h5>
+        <p style="font-size: 0.9rem;">„Ha a HawkView néz, baj nem ér!”<br> Biztonságtechnika modern köntösben.</p>
+      </div>
+      <div class="col-md-4 mb-4 hv-fade-in" style="animation-delay: 0.2s;">
+        <h6 class="fw-bold mb-2">Kapcsolat</h6>
+        <p class="mb-1"><i class="bi bi-telephone-fill me-2"></i>+36 20 986 6975</p>
+        <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i>info@bojza-hawkview.hu</p>
+        <p><i class="bi bi-geo-alt-fill me-2"></i>Tatabánya, sárberki lkt. 123</p>
+      </div>
+      <div class="col-md-4 mb-4 hv-fade-in" style="animation-delay: 0.4s;">
+        <h6 class="fw-bold mb-2">Kövess minket</h6>
+        <a href="#" class="text-light me-3"><i class="bi bi-tiktok fs-5"></i></a>
+        <a href="#" class="text-light me-3"><i class="bi bi-facebook fs-5"></i></a>
+        <a href="#" class="text-light me-3"><i class="bi bi-instagram fs-5"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom text-center mt-4">
+    
+      <p class="text-muted mb-0">
+        &copy; <script>document.write(new Date().getFullYear());</script> Minden jog fenntartva! |
+        Website design <i class="fa fa-heart" aria-hidden="true"></i> by
+        <a href="https://dbojza.netlify.app/" target="_blank" >dbojza</a>
+      </p>
+        <a href="https://dbojza.netlify.app/" target="_blank">
+        <img src="https://dbojza.netlify.app/images/logo.png" alt="dbojza logó" class="footer-logo mb-2">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .hv-footer-anim {
+    animation: hv-fadeIn 1s ease-in-out;
+  }
+
+  .hv-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: hv-fadeInUp 0.8s forwards;
+  }
+
+  @keyframes hv-fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes hv-fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo {
+    max-height: 80px;
+    width: auto;
+  }
+</style>
+
+
+
+
+  
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/javascripts/main.js"></script>
+
+</body>
+
+</html>
+</body>
+</html>
